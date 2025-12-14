@@ -38,5 +38,7 @@ test('Caesar Cipher: Works with capital letters', () => {
 })
 
 test('Caesar Cipher: Works with punctuation', () => {
-    expect(caesarCipher('hello! World!', 5)).toBe('mjqqt! btwqi!');
+    expect(caesarCipher('hello! World!', 5)).toBe('mjqqt! Btwqi!');
+    expect(caesarCipher('hello:! World!,', 5)).toBe('mjqqt:! Btwqi!,');
 })
+

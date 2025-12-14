@@ -1,6 +1,6 @@
 export const caesarCipher = (string, shiftFactor) => {
     const key = 'abcdefghijklmnopqrstuvwxyz';
-    const punctuation = "!";
+    const punctuation = "!?.,;:";
     const newWord = []
 
     for (const char of string) {
@@ -9,7 +9,7 @@ export const caesarCipher = (string, shiftFactor) => {
             continue;
         }
 
-        if (char.includes(punctuation)) {
+        if (punctuation.includes(char)) {
             newWord.push(char)
             continue;
         }
@@ -32,4 +32,3 @@ export const caesarCipher = (string, shiftFactor) => {
 
     return newWord.join('');
 }
-
