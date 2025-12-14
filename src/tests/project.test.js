@@ -2,6 +2,7 @@ import { toCapitalize } from '../modules/capitalize.js';
 import { reverseString } from '../modules/reverse.js';
 import { calculator } from '../modules/calculator.js';
 import { caesarCipher } from '../modules/caesarCipher.js';
+import { analyzeArray } from '../modules/analyzeArray.js';
 
 test('Capitalizes a string', () => {
     expect(toCapitalize('string')).toBe('String');
@@ -42,3 +43,7 @@ test('Caesar Cipher: Works with punctuation', () => {
     expect(caesarCipher('hello:! World!,', 5)).toBe('mjqqt:! Btwqi!,');
 })
 
+test('Analyze Array: Takes in an array and returns an object', () => {
+    expect(analyzeArray([])).toEqual({});
+    expect(analyzeArray([1, 8, 3, 4, 2, 6])).toEqual({ average: 4, min: 1, max: 8, length: 6 });
+})
